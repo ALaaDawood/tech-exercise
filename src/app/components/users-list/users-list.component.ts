@@ -30,6 +30,7 @@ export class UsersListComponent implements OnInit, OnDestroy {
   private filter$!: Observable<UsersFilter>;
   @Select(UserState.getUsers)
   public users$!: Observable<User[]>;
+  private users!: User[];
 
   constructor(private store: Store) { }
 
@@ -51,13 +52,14 @@ export class UsersListComponent implements OnInit, OnDestroy {
   getUsers(): void {
     this.subs.add(
       this.users$.subscribe((users: User[]) => {
+        this.users = users;
         this.dataSource = new TableVirtualScrollDataSource(users);
       })
     );
   }
 
   exportToXML(): void {
-    const fileToExport = new Blob([js2xmlparser.parse('user', this.dataSource)], { type: 'text/xml' });
+    const fileToExport = new Blob([js2xmlparser.parse('user', this.users)], { type: 'text/xml' });
     const link = document.createElement('a');
     link.href = URL.createObjectURL(fileToExport);
     link.target = '_blank';

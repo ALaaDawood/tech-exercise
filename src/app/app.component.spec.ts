@@ -22,10 +22,17 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('tech-exercise');
   });
 
-  it('should render title', () => {
+  it('should render users filter component', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('tech-exercise app is running!');
+    expect(compiled.querySelector('app-users-filter')).toBeTruthy();
+  });
+
+  it('should render users list component', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('app-users-list')).toBeTruthy();
   });
 });

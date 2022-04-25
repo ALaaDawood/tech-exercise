@@ -4,7 +4,7 @@ import { UsersFilter } from 'src/app/models/users-filter.model';
 import { Observable } from 'rxjs';
 import { User } from 'src/app/models/user.model';
 
-interface UsersAPIResponse {
+export interface UsersAPIResponse {
   results: User[];
 }
 
@@ -15,6 +15,7 @@ interface UsersAPIResponse {
 export class UserService {
 
   constructor(private httpClient: HttpClient) { }
+  usersApiUrl = 'https://randomuser.me/api/';
 
   getUsers(filter?: UsersFilter): Observable<UsersAPIResponse> {
     let params = new HttpParams()
@@ -25,6 +26,6 @@ export class UserService {
     if (filter?.nationality) {
       params = params.append('nat', filter?.nationality);
     }
-    return this.httpClient.get<UsersAPIResponse>('https://randomuser.me/api/', { params });
+    return this.httpClient.get<UsersAPIResponse>(this.usersApiUrl, { params });
   }
 }

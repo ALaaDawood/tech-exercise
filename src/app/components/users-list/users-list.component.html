@@ -4,10 +4,10 @@
     </button>
 
     <mat-menu #exportMenu="matMenu" class="export-menu">
-        <a (click)="exporter.exportTable('csv')">
+        <a class="csv-exporter" (click)="exporter.exportTable('csv')">
             <mat-label mat-menu-item>CSV</mat-label>
         </a>
-        <a (click)="exportToXML()">
+        <a class="xml-exporter" (click)="exportToXML()">
             <mat-label mat-menu-item>XML</mat-label>
         </a>
     </mat-menu>

@@ -6,12 +6,13 @@ export interface UserLocation {
     city: string;
     state: string;
     postcode: number;
+    country: string;
     coordinates: {
-        latitude: number;
-        longitude: number;
+        latitude: string;
+        longitude: string;
     };
     timezone: {
-        offset: number;
+        offset: string;
         description: string;
     };
 }

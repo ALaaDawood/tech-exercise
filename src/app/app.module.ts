@@ -10,18 +10,19 @@ import { UsersFilterComponent } from './components/users-filter/users-filter.com
 import { UsersListComponent } from './components/users-list/users-list.component';
 import { UserState } from './store/users.state';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TableVirtualScrollModule } from 'ng-table-virtual-scroll';
 
 // Angular material imports
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
-import {MatRadioModule} from '@angular/material/radio';
-import {MatSelectModule} from '@angular/material/select';
-import {MatTableModule} from '@angular/material/table';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatSelectModule } from '@angular/material/select';
+import { MatTableModule } from '@angular/material/table';
 import { MatTableExporterModule } from 'mat-table-exporter';
-import {ScrollingModule} from '@angular/cdk/scrolling';
-import {MatMenuModule} from '@angular/material/menu';
-import {MatIconModule} from '@angular/material/icon';
+import { ScrollingModule } from '@angular/cdk/scrolling';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import {MatIconModule} from '@angular/material/icon';
     ScrollingModule,
     MatMenuModule,
     MatIconModule,
+    TableVirtualScrollModule,
     NgxsModule.forRoot([UserState], {
       developmentMode: !environment.production
     }),

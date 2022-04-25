@@ -6,6 +6,7 @@ import { UsersFilter } from 'src/app/models/users-filter.model';
 import { GetUsers } from 'src/app/store/users.actions';
 import { UserState } from 'src/app/store/users.state';
 import * as js2xmlparser from 'js2xmlparser';
+import { TableVirtualScrollDataSource } from 'ng-table-virtual-scroll';
 @Component({
   selector: 'app-users-list',
   templateUrl: './users-list.component.html',
@@ -24,7 +25,7 @@ export class UsersListComponent implements OnInit, OnDestroy {
     'phoneNumber'
   ];
 
-  dataSource: User[] = [];
+  dataSource!: TableVirtualScrollDataSource<User>;
   @Select(UserState.getUsersFilter)
   private filter$!: Observable<UsersFilter>;
   @Select(UserState.getUsers)
@@ -50,7 +51,7 @@ export class UsersListComponent implements OnInit, OnDestroy {
   getUsers(): void {
     this.subs.add(
       this.users$.subscribe((users: User[]) => {
-        this.dataSource = [...users];
+        this.dataSource = new TableVirtualScrollDataSource(users);
       })
     );
   }

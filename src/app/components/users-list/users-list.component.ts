@@ -14,14 +14,14 @@ import * as js2xmlparser from 'js2xmlparser';
 export class UsersListComponent implements OnInit, OnDestroy {
   subs = new Subscription();
   displayedColumns: string[] = [
+    'picture',
     'name',
     'gender',
     'location',
     'email',
     'currentAge',
     'regSeniority',
-    'phoneNumber',
-    'picture'
+    'phoneNumber'
   ];
 
   dataSource: User[] = [];

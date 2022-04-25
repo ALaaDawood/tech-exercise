@@ -1,11 +1,38 @@
-.demo-table {
-  width: 100%;
+.users-table {
+  width: 75vw;
+  padding: 1%;
+  border-radius: 5px;
+  display: table;
+  font: 400 16px/18px Roboto, "Helvetica Neue", sans-serif;
+  overflow-x: auto;
+  .list-item-image {
+    border-radius: 50%;
+  }
+  th.mat-header-cell,
+  td.mat-cell {
+    padding: 5px;
+  }
 }
-
-.demo-button-container {
+.table-container {
+  overflow-x: auto;
+}
+.button-container {
   padding-bottom: 16px;
 }
 
-.demo-button + .demo-button {
-  margin-left: 8px;
+.export-button {
+  background-color: #ffff;
+  color: #fe9900;
+}
+::ng-deep .export-menu.mat-menu-panel {
+  width: 140px !important;
+}
+
+@media only screen and (max-width: 760px),
+  (min-device-width: 768px) and (max-device-width: 1024px) {
+    .users-table {
+      display: block;
+      width: 93vw;
+      font: 400 14px/16px Roboto, "Helvetica Neue", sans-serif;
+    }
 }

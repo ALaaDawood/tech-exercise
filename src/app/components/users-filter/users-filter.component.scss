@@ -1,4 +1,56 @@
 .mat-form-field {
-    font-size: 14px;
-    width: 50%;
+  font-size: 14px;
+  width: 50%;
+}
+
+.form-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 73vw;
+  background-color: #ffff;
+  margin: 15px;
+  padding: 15px;
+  border-radius: 5px;
+  font: 400 16px/18px Roboto, "Helvetica Neue", sans-serif;
+  .mat-radio-group {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
   }
+  .mat-radio-button {
+    margin-bottom: 8px;
+  }
+
+  .filter-users {
+    color: #ffff;
+    background-color: #fe9900;
+  }
+  ::ng-deep .mat-radio-inner-circle {
+    background-color: #fe9900;
+  }
+  ::ng-deep .mat-radio-outer-circle {
+    border-color: #fe9900 !important;
+  }
+}
+
+@media only screen and (max-width: 768px),
+  (min-device-width: 768px) and (max-device-width: 1024px) {
+  .form-container {
+    align-items: unset;
+    flex-direction: column;
+    width: 90vw;
+    padding: 6px;
+    font: 400 14px/16px Roboto, "Helvetica Neue", sans-serif;
+    .mat-radio-group {
+      margin-top: 10px;
+    }
+    .nationality-field {
+      width: 100%;
+    }
+    .filter-label {
+      margin-bottom: 10px;
+    }
+  }
+}

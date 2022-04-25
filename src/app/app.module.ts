@@ -20,6 +20,8 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatTableModule} from '@angular/material/table';
 import { MatTableExporterModule } from 'mat-table-exporter';
 import {ScrollingModule} from '@angular/cdk/scrolling';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -39,6 +41,8 @@ import {ScrollingModule} from '@angular/cdk/scrolling';
     MatTableModule,
     MatTableExporterModule,
     ScrollingModule,
+    MatMenuModule,
+    MatIconModule,
     NgxsModule.forRoot([UserState], {
       developmentMode: !environment.production
     }),

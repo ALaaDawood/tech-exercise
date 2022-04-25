@@ -1,9 +1,12 @@
-<form [formGroup]="filtersForm">
+<form [formGroup]="filtersForm" class="form-container">
+    <label class="filter-label">Filter Users by : </label>
+    <label>Gender </label>
+
     <mat-radio-group aria-label="Select an option" formControlName="gender">
         <mat-radio-button value="male">Male</mat-radio-button>
         <mat-radio-button value="female">Female</mat-radio-button>
     </mat-radio-group>
-    <mat-form-field appearance="fill">
+    <mat-form-field class="nationality-field">
         <mat-label>Nationality</mat-label>
         <mat-select formControlName="nationality">
             <mat-option *ngFor="let nationality of supportedNationalities" [value]="nationality">
@@ -11,7 +14,7 @@
             </mat-option>
         </mat-select>
     </mat-form-field>
-    <button mat-button (click)="filterUsers();">
+    <button mat-button class="filter-users" (click)="filterUsers();">
         Filter Users
     </button>
 </form>

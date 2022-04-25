@@ -1,5 +1,8 @@
 export interface UserLocation {
-    street: string;
+    street: {
+        name: string;
+        number: number;
+    };
     city: string;
     state: string;
     postcode: number;

@@ -18,7 +18,7 @@ export class UserService {
 
   getUsers(filter?: UsersFilter): Observable<UsersAPIResponse> {
     let params = new HttpParams()
-      .append('results', 20);
+      .append('results', 200);
     if (filter?.gender) {
       params = params.append('gender', filter?.gender);
     }

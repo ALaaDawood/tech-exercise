@@ -1,1 +1,60 @@
-<p>users-list works!</p>
+<div class="demo-button-container">
+    <button mat-raised-button (click)="exporter.exportTable('csv')" class="demo-button">
+      Export as csv
+    </button>
+    <button
+        mat-raised-button
+        [disabled]="!dataSource.length"
+        (click)="exportToXML()"
+        class="demo-button">
+      Export as XML
+    </button>
+  </div>
+
+<table matTableExporter  #exporter="matTableExporter" aria-describedby="users table" mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
+    <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>Name</th>
+        <td mat-cell *matCellDef="let user">{{user.name.first + ' ' + user.name.last}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="gender">
+        <th mat-header-cell *matHeaderCellDef>Gender</th>
+        <td mat-cell *matCellDef="let user">{{user.gender}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="location">
+        <th mat-header-cell *matHeaderCellDef>Location</th>
+        <td mat-cell *matCellDef="let user">{{user.location.state + ', ' + user.location.city}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef>E-mail</th>
+        <td mat-cell *matCellDef="let user">{{user.email}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="currentAge">
+        <th mat-header-cell *matHeaderCellDef>Current Age</th>
+        <td mat-cell *matCellDef="let user">{{user.dob.age}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="regSeniority">
+        <th mat-header-cell *matHeaderCellDef>Registration Seniority</th>
+        <td mat-cell *matCellDef="let user">{{user.registered.age}}</td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="phoneNumber">
+        <th mat-header-cell *matHeaderCellDef>Phone Number</th>
+        <td mat-cell *matCellDef="let user">{{user.phone}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="picture">
+        <th mat-header-cell *matHeaderCellDef>Picture</th>
+        <td mat-cell *matCellDef="let user">
+            <img alt="user-image" src="{{user.picture.thumbnail}}" class="list-item-image">
+        </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

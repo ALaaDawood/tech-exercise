@@ -17,7 +17,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatSelectModule} from '@angular/material/select';
-
+import {MatTableModule} from '@angular/material/table';
+import { MatTableExporterModule } from 'mat-table-exporter';
+import {ScrollingModule} from '@angular/cdk/scrolling';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,9 @@ import {MatSelectModule} from '@angular/material/select';
     MatButtonModule,
     MatRadioModule,
     MatSelectModule,
+    MatTableModule,
+    MatTableExporterModule,
+    ScrollingModule,
     NgxsModule.forRoot([UserState], {
       developmentMode: !environment.production
     }),

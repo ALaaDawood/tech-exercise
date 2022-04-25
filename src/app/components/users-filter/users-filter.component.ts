@@ -6,7 +6,7 @@ import { UpdateUsersFilter } from 'src/app/store/users.actions';
 @Component({
   selector: 'app-users-filter',
   templateUrl: './users-filter.component.html',
-  styleUrls: ['./users-filter.component.sass']
+  styleUrls: ['./users-filter.component.scss']
 })
 export class UsersFilterComponent implements OnInit {
   filtersForm!: FormGroup;

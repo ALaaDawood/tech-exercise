@@ -17,6 +17,16 @@
   td.mat-cell {
     padding: 5px;
   }
+  .user-row {
+    cursor: pointer;
+  }
+  tr.user-row:not(.example-expanded-row):hover {
+    background: whitesmoke;
+  }
+
+  tr.user-row:not(.example-expanded-row):active {
+    background: #efefef;
+  }
 }
 .table-container {
   overflow-x: auto;

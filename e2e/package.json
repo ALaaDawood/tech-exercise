@@ -1,0 +1,36 @@
+{
+  "name": "e2e",
+  "version": "1.0.0",
+  "description": "tech exercise app integration tests",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "results",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:cypress/recommended"
+    ]
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^8.1.2",
+    "cypress": "^9.6.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "tsify": "^5.0.4",
+    "typescript": "^4.6.3"
+  },
+  "dependencies": {
+    "@types/node": "^17.0.27",
+    "eslint-plugin-cypress": "^2.12.1"
+  }
+}

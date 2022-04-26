@@ -15,7 +15,7 @@
 <div class="table-container">
     <cdk-virtual-scroll-viewport tvsItemSize class="scroll-view-port-container">
 
-        <table matTableExporter #exporter="matTableExporter" aria-describedby="users table" mat-table
+        <table data-cy="users-table" matTableExporter #exporter="matTableExporter" aria-describedby="users table" mat-table
             [dataSource]="dataSource" class="users-table">
 
             <ng-container matColumnDef="picture">

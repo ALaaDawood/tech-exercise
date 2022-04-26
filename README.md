@@ -2,26 +2,37 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.3.
 
+## To serve the app
+
+- you just need to run `docker-compose up`
+- navigate to `http://localhost:3000/`
+
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Run `npm run build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run `npm run test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Running e2e tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+the server should be running
+`docker-compose up`
+from another terminal
 
-## Further help
+- without docker
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+change `e2e/cypress.json` baseurl from `app:3000` to `localhost:3000`
+
+```
+cd e2e
+npm i
+npx cypress run
+```
+
+####

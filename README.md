@@ -4,9 +4,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## To serve the app
 - Run `docker compose build`
-- then Run `docker-compose up`
+- then Run `docker compose up`
   *this will serve the app to `http://localhost:3000/`
-  and at the same time run **e2e tests** and **unit tests***
+  and at the same time will run **e2e tests** and **unit tests***
 - navigate to `http://localhost:3000/`
 
 ## Development server
@@ -30,12 +30,12 @@ Run `npm run test` to execute the unit tests via [Karma](https://karma-runner.gi
 ## Running e2e tests
 
 the server should be running
-`docker-compose up`
+`docker compose up`
 from another terminal
 
 - without docker
 
-change `e2e/cypress.json` baseurl from `app:3000` to `localhost:3000`
+change `e2e/cypress.json` baseurl from `app` to `localhost:3000`
 
 ```
 cd e2e

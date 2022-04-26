@@ -3,8 +3,10 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.3.
 
 ## To serve the app
-
-- you just need to run `docker-compose up`
+- Run `docker compose build`
+- then Run `docker-compose up`
+  *this will serve the app to `http://localhost:3000/`
+  and at the same time run **e2e tests** and **unit tests***
 - navigate to `http://localhost:3000/`
 
 ## Development server
@@ -16,6 +18,12 @@ Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app 
 Run `npm run build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
 ## Running unit tests
+
+#### using docker :
+
+Run `docker compose run unit`
+
+#### without docker :
 
 Run `npm run test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 

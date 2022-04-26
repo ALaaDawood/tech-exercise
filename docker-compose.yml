@@ -12,11 +12,14 @@ services:
   e2e:
     container_name: e2e-testing
     build:
-      context: .
-      dockerfile: e2e/Dockerfile
+      context: e2e/
+      dockerfile: Dockerfile
     depends_on:
       - "app"
-    command: npx cypress run
+    volumes:
+      - ./e2e/:/app
+      - /app/node_modules
+    command: npx cypress run --browser chrome --headless
 
 volumes:
   node_modules:

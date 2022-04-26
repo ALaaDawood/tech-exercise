@@ -8,7 +8,6 @@ export interface UsersAPIResponse {
   results: User[];
 }
 
-
 @Injectable({
   providedIn: 'root'
 })
@@ -16,10 +15,12 @@ export class UserService {
 
   constructor(private httpClient: HttpClient) { }
   usersApiUrl = 'https://randomuser.me/api/';
+  fieldsToInclude = 'gender,picture,name,location,email,dob,phone,registered';
 
   getUsers(filter?: UsersFilter): Observable<UsersAPIResponse> {
     let params = new HttpParams()
-      .append('results', 200);
+      .append('results', 200)
+      .append('inc', this.fieldsToInclude);
     if (filter?.gender) {
       params = params.append('gender', filter?.gender);
     }

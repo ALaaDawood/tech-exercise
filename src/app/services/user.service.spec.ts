@@ -157,7 +157,8 @@ describe('UserService', () => {
         error: fail
       });
 
-      const req = httpTestingController.expectOne(service.usersApiUrl + '?results=200');
+      const req = httpTestingController.expectOne(service.usersApiUrl +
+        '?results=200&inc=gender,picture,name,location,email,dob,phone,registered');
       expect(req.request.method).toEqual('GET');
 
       req.flush(expectedUsers);
@@ -178,7 +179,8 @@ describe('UserService', () => {
         error: fail
       });
 
-      const req = httpTestingController.expectOne(service.usersApiUrl + '?results=200');
+      const req = httpTestingController.expectOne(service.usersApiUrl +
+        '?results=200&inc=gender,picture,name,location,email,dob,phone,registered');
       req.flush([]);
     });
 
@@ -189,7 +191,8 @@ describe('UserService', () => {
         error: error => expect(error.message).toContain(msg)
       });
 
-      const req = httpTestingController.expectOne(service.usersApiUrl + '?results=200');
+      const req = httpTestingController.expectOne(service.usersApiUrl
+        + '?results=200&inc=gender,picture,name,location,email,dob,phone,registered');
 
       req.flush(msg, { status: 404, statusText: 'Not Found' });
     });
@@ -203,7 +206,8 @@ describe('UserService', () => {
         error: fail
       });
 
-      const requests = httpTestingController.match(service.usersApiUrl + '?results=200');
+      const requests = httpTestingController.match(service.usersApiUrl
+        + '?results=200&inc=gender,picture,name,location,email,dob,phone,registered');
       expect(requests.length)
         .withContext('calls to getUsers()')
         .toEqual(2);

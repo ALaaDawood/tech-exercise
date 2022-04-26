@@ -51,9 +51,11 @@ npx cypress run
 - ng-table-virtual-scroll to handle virtual scrolling (as virtual scrolling is not supported for mat-tables yet)
 
 ## To be improved
-- make table columns dynamic
+- use the API download option instead of using export packages
+- make table columns dynamic (to add or remove columns as we like)
 - add more unit tests
 - cover more scenarios in e2e
 - consider more devices sizes in responsive design
+- create a separate folder for docker containing all docker related files for serving the app itself and running unit and e2e tests
 
 ####

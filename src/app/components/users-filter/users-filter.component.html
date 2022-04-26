@@ -3,18 +3,18 @@
     <label>Gender </label>
 
     <mat-radio-group aria-label="Select an option" formControlName="gender">
-        <mat-radio-button value="male">Male</mat-radio-button>
-        <mat-radio-button value="female">Female</mat-radio-button>
+        <mat-radio-button data-cy="male-radio-button" value="male">Male</mat-radio-button>
+        <mat-radio-button data-cy="female-radio-button" value="female">Female</mat-radio-button>
     </mat-radio-group>
     <mat-form-field class="nationality-field">
         <mat-label>Nationality</mat-label>
-        <mat-select formControlName="nationality">
+        <mat-select data-cy="nationality-select-field" formControlName="nationality">
             <mat-option *ngFor="let nationality of supportedNationalities" [value]="nationality">
                 {{nationality}}
             </mat-option>
         </mat-select>
     </mat-form-field>
-    <button mat-button class="filter-users" (click)="filterUsers();">
+    <button data-cy="filter-users-button" mat-button class="filter-users" (click)="filterUsers();">
         Filter Users
     </button>
 </form>

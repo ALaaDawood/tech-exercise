@@ -35,7 +35,7 @@ from another terminal
 
 - without docker
 
-change `e2e/cypress.json` baseurl from `app:3000` to `localhost:3000`
+change `e2e/cypress.json` baseurl from `app` to `localhost:3000`
 
 ```
 cd e2e

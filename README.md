@@ -37,6 +37,8 @@ npx cypress run
 
 ## Packages and libraries used:
 - angular material for design components
+- NGXS for app state management
+- Cypress with typescript and cucumber to implement integration tests
 - mat-table-exporter to export table data as csv, and other extensions
 - ng-table-virtual-scroll to handle virtual scrolling (as virtual scrolling is not supported for mat-tables yet)
 

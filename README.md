@@ -35,4 +35,15 @@ npm i
 npx cypress run
 ```
 
+## Packages and libraries used:
+- angular material for design components
+- mat-table-exporter to export table data as csv, and other extensions
+- ng-table-virtual-scroll to handle virtual scrolling (as virtual scrolling is not supported for mat-tables yet)
+
+## To be improved
+- make table columns dynamic
+- add more unit tests
+- cover more scenarios in e2e
+- consider more devices sizes in responsive design
+
 ####

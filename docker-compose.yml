@@ -1,7 +1,9 @@
 version: '3'
 services:
   app:
-    build: .
+    build:
+      context: .
+      dockerfile: docker/angular/Dockerfile
     ports:
       - 3000:80
     working_dir: /app
@@ -25,7 +27,7 @@ services:
     container_name: unit-testing
     build:
       context: .
-      dockerfile: unit/Dockerfile
+      dockerfile: docker/unit-tests/Dockerfile
     volumes:
       - ./:/app
       - node_modules:/app/node_modules

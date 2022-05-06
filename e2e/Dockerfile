@@ -1,4 +1,4 @@
-From cypress/browsers:node14.16.0-chrome90-ff88
+FROM cypress/browsers:node14.16.0-chrome90-ff88
 
 WORKDIR /app
 COPY package.json ./

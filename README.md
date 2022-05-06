@@ -54,11 +54,11 @@ npx cypress run
 
 ## To be improved
 
-_ use the API download option instead of using export packages
-_ make table columns dynamic (to add or remove columns as we like)
-_ add more unit tests
-_ cover more scenarios in e2e
-\_ consider more devices sizes in responsive design
-&check; create a separate folder for docker containing all docker related files for serving the app itself and running unit and e2e tests
+- use the API download option instead of using export packages
+- make table columns dynamic (to add or remove columns as we like)
+- add more unit tests
+- cover more scenarios in e2e
+- consider more devices sizes in responsive design
+- &check; create a separate folder for docker containing all docker related files for serving the app itself and running unit and e2e tests
 
 ####

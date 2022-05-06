@@ -3,10 +3,11 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.3.
 
 ## To serve the app
+
 - Run `docker compose build`
 - then Run `docker compose up`
-  *this will serve the app to `http://localhost:3000/`
-  and at the same time will run **e2e tests** and **unit tests***
+  \*this will serve the app to `http://localhost:3000/`
+  and at the same time will run **e2e tests** and **unit tests\***
 - navigate to `http://localhost:3000/`
 
 ## Development server
@@ -44,6 +45,7 @@ npx cypress run
 ```
 
 ## Packages and libraries used:
+
 - angular material for design components
 - NGXS for app state management
 - Cypress with typescript and cucumber to implement integration tests
@@ -51,11 +53,12 @@ npx cypress run
 - ng-table-virtual-scroll to handle virtual scrolling (as virtual scrolling is not supported for mat-tables yet)
 
 ## To be improved
-- use the API download option instead of using export packages
-- make table columns dynamic (to add or remove columns as we like)
-- add more unit tests
-- cover more scenarios in e2e
-- consider more devices sizes in responsive design
-- create a separate folder for docker containing all docker related files for serving the app itself and running unit and e2e tests
+
+_ use the API download option instead of using export packages
+_ make table columns dynamic (to add or remove columns as we like)
+_ add more unit tests
+_ cover more scenarios in e2e
+\_ consider more devices sizes in responsive design
+&check; create a separate folder for docker containing all docker related files for serving the app itself and running unit and e2e tests
 
 ####
